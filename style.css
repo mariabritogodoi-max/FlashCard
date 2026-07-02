@@ -1,72 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.cabecalho {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c1121f; /* Vermelho */
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: #0b3d91; /* Azul */
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f5f2f2;
+    background: linear-gradient(to bottom, #eaf2ff, #ffffff);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.cabecalho {
-    padding: 15px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1c3b7e;
-}
-
-h1 {
+footer {
+    background-color: #0b3d91; /* Azul */
     color: white;
-    font-size: 24px;
-}
-
-.cabecalho-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-}
-
-h2 {
-    margin-bottom: 30px;
-    color: #1c3b7e;
-}
-
-section {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.cartao {
-    width: 260px;
-    height: 350px;
-    perspective: 1000px;
-}
-
-.cartao-interno {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.cartao:hover .cartao-interno {
-    transform: rotateY(180deg);
+    text-align: center;
+    padding: 15px;
 }
 
 .cartao-frente,
@@ -75,36 +32,12 @@ section {
     width: 100%;
     height: 100%;
     background: white;
+    border: 3px solid #c1121f; /* Borda vermelha */
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     overflow: hidden;
     backface-visibility: hidden;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.cartao-verso {
-    transform: rotateY(180deg);
-}
-
-.cartao-imagem {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-}
-
-.cartao p {
-    padding: 12px;
-    text-align: center;
-    font-weight: bold;
-    color: #333;
-}
-
-footer {
-    background-color: #7e3e1c;
-    color: white;
-    text-align: center;
-    padding: 15px;
 }
